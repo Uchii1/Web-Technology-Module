@@ -1,0 +1,224 @@
+/* CSS File for Portfolio Site */
+
+
+/*Smooth scrolling function- neessary to do by CSS, as page does not have JavaScript */
+html {
+  scroll-behavior: smooth;
+}
+
+
+/*This sets overall settings for the webpage, which can be changed in each section */
+ body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: black;
+            scroll-behavior: smooth;
+            background-color: antiquewhite;
+            margin: 0;
+           
+        }
+
+#about, #projects, #education, #skills, #contact {
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-bottom: 0.05px;
+    margin-top: 3px;
+}
+
+/* This ensures the user can view the whole page without zooming out */
+ html, body {
+            max-width: 120vw;
+      
+            box-sizing: border-box;
+            }
+   
+  * {
+            box-sizing: border-box;
+            }
+
+/* Settings for the header */
+        header {
+            background-color:antiquewhite;
+            color: black;
+            padding: 30px 0;
+            text-align: center;
+        
+        }
+
+        header h1 {
+            font-size: 40px;
+            font-family: 'Times New Roman', Times, serif;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 16px;
+            opacity: 0.95;
+            margin-left: 10%;
+        }
+/* Navigation bar settings */        
+        nav {
+            background-color: lightgoldenrodyellow;
+            border: 3px solid black;
+            padding: 30px;
+            text-align: center;
+            position: sticky;
+            /*position sticky keeps the nav bar visible when the user scrolls down */
+            top: 0;
+            z-index: 100;
+            margin-left: 1px;
+            margin-right: 1px;   
+        }
+
+        nav a {
+            color: black;
+            text-decoration: none;
+            margin: 3px 35px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: color 0.3s;
+            cursor: pointer;
+        }
+
+        nav a:hover {
+            color:grey
+        }
+
+        .fade-in-on-scroll {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        #about, #projects, #education, #skills, #contact {
+           scroll-margin-top: 80px; /*specifies where auto-scroll function ends*/
+           margin-top: 20px; /* specifies spacing between sections */
+        }
+
+/* About Me Section Styling */
+.about{
+    /*padding: 1% 2% 1% 2%;*/
+   /* padding: 2% 5% 2% 5%; */
+    padding: 5px 90px 5px 90px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+}
+
+
+/* Projects Section Styling*/
+.projects {
+    max-width: 100%;
+    margin: 0% auto 0% auto; 
+    display:flex;
+    gap: 20px 30px; /*vertical and horizontal space between boxes */
+    flex-wrap:wrap;
+    justify-content:space-between;
+    /*padding: 2% 5% 2% 5%;*/
+    padding: 40px 90px 40px 90px;
+    /*the padding attribute order is: top, right, bottom, left  */
+}
+
+.column {
+    flex: 0 1 calc(33.33% - 14px);
+    max-width: 30%;
+    padding: 10px;
+    background: cornsilk;
+    border-radius: 10px;
+}
+
+@media (max-width: 1000px) {
+    .column {
+        flex: 0 1 calc(50% - 10px);
+    }
+}
+
+@media (max-width: 480px) {
+    .column {
+        flex: 0 1 100%;
+    }
+}
+
+
+/* Education section styling*/
+.education { /*flex container for quaifications section*/
+    max-width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;  /* centers flex items */
+    padding: 40px 90px;
+    
+}
+
+.qualifications { /*flex item*/
+    flex:0 1 60%;
+    margin: 5% ; 
+    margin-top: 2%;
+    margin-bottom: 7%;
+    border-radius: 10px;
+    display: grid; 
+    background-color: cornsilk;
+ 
+}
+
+
+/* Learning section styling */
+
+.skills {
+    max-width: 100%;
+    margin:5%;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0 20px;
+    margin-top: 2%;
+    margin-bottom: 7%;
+}
+
+.learning {
+    flex: 0 1 calc(50% - 10px);
+    max-width: 600px;
+    padding: 20px 5px 20px 10px;
+    /*top, right bottom left */
+    background: cornsilk;
+    border-radius: 10px;
+    display: grid; 
+}
+
+/* Contact Me Section */
+
+.contact{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    margin-left:5%;
+    margin-right: 5%;
+    padding-bottom: 1rem;
+    /* This is the same as margin: 2% 5% 7% 5%;*/
+}
+
+/* Contact Me Section- textboxes and similar only*/
+.contact input{
+    border: 2px solid gainsboro;
+    border-radius: 7px;
+    width: 15rem;
+    height: 1.5rem;
+    font-size: 1rem;
+    font-family:Arial, Helvetica, sans-serif
+}
+
+
+     /*text area styling for message box */
+textarea{
+    width:400px;
+    min-width:100px;
+    max-width: 500px;
+    height: 100px;
+    min-height: 40px;
+    max-height: 200px;
+    border-color: silver;
+    border-radius: 20px;
+    box-sizing:border-box;
+    display: inline-block;
+    position: relative;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: medium;
+}
+
