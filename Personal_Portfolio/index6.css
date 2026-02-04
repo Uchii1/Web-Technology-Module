@@ -193,7 +193,7 @@ nav a:hover {
 }
 
 /* Contact Me Section- textboxes and similar only*/
-.contact input{
+.contact input:not([type="radio"]){
     border: 2px solid gainsboro;
     border-radius: 7px;
     width: 15rem;
@@ -219,4 +219,5 @@ textarea{
     font-family: 'Times New Roman', Times, serif;
     font-size: medium;
 }
+
 
